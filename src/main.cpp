@@ -4,6 +4,7 @@
 #include "Color.h"
 #include "Circle.h"
 #include <iostream>
+#include "Vector.h"
 // #include "Rectangle.h"
 
 
@@ -20,9 +21,10 @@ int main()
 	int g = 40;
 	int b = 255;
 	Color c(r,g,b);
+	Vector  * v = new Vector(50,50);
 	Circle * circ = new Circle(x,y,radius,mass,c);
+	circ->addVector(v);
 	app.addShape(circ);	//on ajoute l'element cree a l objet WIndow
-
 
     // Affichage du contenu de la fenêtre à l'écran        
     app.display();

@@ -61,6 +61,7 @@ void Window::drawAll(void){
   {
     _shapes[i]->setWindow(this);            //Ajout de l'element Window
     _shapes[i]->draw();                 //Appel de Shape.draw();   
+    _shapes[i]->drawTrajectory();
   }
 }
 
