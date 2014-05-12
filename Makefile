@@ -1,7 +1,7 @@
 # ------------ Options du projet -----------
 TARGET=main
 
-OBJECTS= src/$(TARGET).o src/Window.o src/Circle.o src/Shape.o src/Vector.o
+OBJECTS= src/$(TARGET).o src/Window.o src/Circle.o src/Shape.o src/Vector.o src/Collision.o
 
 # ------------ Compilateur -----------
 CC=g++

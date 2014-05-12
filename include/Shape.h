@@ -28,6 +28,11 @@ class Shape{
 		void addVector(Vector * v);
 		inline Vector * getVector(){return _v;}
 		inline string getName(){return _name;}
+		int getPosX(void) const {return _x;} // obtenir position en x	
+		int getPosY(void) const {return _y;} // obtenir position en y
+		void setPosX(int x);
+		void setPosY(int y);
+		void move(Shape &s,int dx, int dy);
 
 };
 #endif

@@ -35,5 +35,19 @@ void Shape::drawTrajectory()
 	}
 
 
+}
 
+void Shape::setPosX(int x){ _x=x; }
+void Shape::setPosY(int y){ _y=y; }
+
+// Methode pour mettre la boule en mouvement
+void Shape::move(Shape &s,int dx, int dy)
+{
+ int x= s.getPosX();
+ int y= s.getPosY();
+ x=x+dx;
+ y=y+dy;
+// usleep(100000);
+ s.setPosX(x);
+ s.setPosY(y);
 }
