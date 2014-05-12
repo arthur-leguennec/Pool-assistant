@@ -7,11 +7,12 @@
 #include "Vector.h"
 // #include "Rectangle.h"
 
+using namespace std;
 
 int main()
 {
     // Fenêtre de rendu
-    Window app("Pool2D", 600, 600);
+    Window app("Pool-assistant", 600, 600);
 
 	int x=300;
 	int y=300;
@@ -20,9 +21,10 @@ int main()
 	int r = 255;
 	int g = 40;
 	int b = 255;
+	string name = "Circle";
 	Color c(r,g,b);
-	Vector  * v = new Vector(50,50);
-	Circle * circ = new Circle(x,y,radius,mass,c);
+	Vector  * v = new Vector(200,200);	//10,10 indique la position, c'est moyen
+	Circle * circ = new Circle(name,x,y,radius,mass,c);
 	circ->addVector(v);
 	app.addShape(circ);	//on ajoute l'element cree a l objet WIndow
 

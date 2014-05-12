@@ -9,6 +9,7 @@ private:
 public:
 	Vector(int x,int y);
 	sf::Vector2f getVector(void) const{return _vect;}
+	void setVector(int x, int y);
 
 };
 

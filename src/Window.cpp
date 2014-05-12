@@ -9,6 +9,7 @@
 // #include "Rectangle.h"
 #include "Shape.h"
 #include "Window.h"
+#include "Vector.h"
 
 using namespace std;
 //Constructeur par initialisation
@@ -35,7 +36,37 @@ void Window::display(){
         {
             // Fenêtre fermée : on quitte
             if (event.type == sf::Event::Closed)
-                _win->close();
+            {
+               _win->close();
+            }
+            // if (event.type == sf::Event::KeyPressed) 
+            // {
+
+            //   if (event.key.code == sf::Keyboard::Left ) 
+            //   {
+            //      _win->clear();
+            //      // move left
+            //      if(_shapes[0]->getName() == "Circle")
+            //      {
+            //       Circle *c = dynamic_cast<Circle *>(_shapes[0]);
+            //       int x = _shapes[0]->getVector()->getVector().x;
+            //       int y = _shapes[0]->getVector()->getVector().y;
+            //       _shapes[0]->getVector()->setVector(x-10,y+10);//revoir condition x+1.. a definir mathematique avec des cos et sin
+
+            //       cout<<c->getRadius()<<endl;
+            //      }
+                 
+            //   }
+            //   else if (event.key.code == sf::Keyboard::Right ) 
+            //   {
+            //      _win->clear();
+            //      // move right
+            //      int x = _shapes[0]->getVector()->getVector().x;
+            //      int y = _shapes[0]->getVector()->getVector().y;
+            //      _shapes[0]->getVector()->setVector(x+1,y-1);//revoir condition x+1..
+
+            //   }
+            // }
         }
 
         // Efface l'écran (remplissage avec du noir)

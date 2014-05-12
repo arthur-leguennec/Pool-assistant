@@ -3,6 +3,7 @@
 #include "Color.h"
 #include "Shape.h"
 #include "Vector.h"
+#include <iostream>
 
 
 //Methode qui permet d afficher un objet de Circle
@@ -18,8 +19,8 @@ void Circle::draw() const
 }
 
 //Constructeur par initialisation
-Circle::Circle(int x, int y, int radius, int mass, Color c): Shape(x,y,c),_radius(radius),_mass(mass){}
+Circle::Circle(std::string name, int x, int y, int radius, int mass, Color c): Shape(name, x,y,c),_radius(radius),_mass(mass){}
 
 //Constructeur par recopie
-Circle::Circle(const Circle& c):Shape(c._x ,c._y ,c._color),_radius(c._radius), _mass(c._mass)
+Circle::Circle(const Circle& c):Shape(c._name, c._x ,c._y ,c._color),_radius(c._radius), _mass(c._mass)
 {}
